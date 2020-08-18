@@ -1,0 +1,102 @@
+.container {
+    max-width: 940px;
+    margin: 0px auto;
+    @include responsive-991{
+        max-width: 767px;
+    }
+}
+
+.logo {
+    background: url("https://hexschool.github.io/webLayoutTraining1st/student-week1/logo-all-dark.svg") no-repeat;
+    display: block;
+    width: 220px;
+    height: 40px;
+    background-size: auto;
+    @include hide-text;
+
+    @include pad {
+        background: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/logotype-lg-dark.svg) no-repeat;
+        width: 115px;
+        height: 17px;
+    }
+}
+
+.navBar {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hamburgerMenu {
+    display: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px 20px;
+    @include link-hover($color-secondary);
+    border-radius: 5px;
+
+    @include pad {
+        display: block;
+    }
+}
+
+.navMenu {
+    display: flex;
+    align-items: center;
+
+    .navLink {
+        display: flex;
+        justify-content: space-between;
+
+        @include pad {
+            max-height: 0px;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            width: 100%;
+            overflow: hidden;
+            transition: 0.8s;
+            background-color: white;
+            text-align: center;
+            z-index: 1;
+        }
+
+        &-active {
+            max-height: 200px;
+        }
+
+        &Item a {
+            font-size: 16px;
+            padding: 10px 30px;
+            font-weight: bold;
+            color: $color-primary;
+            @include link-hover($color-secondary);
+            border-radius: 5px;
+
+            @include pad {
+                display: block;
+                padding: 15px 0px;
+            }
+        }
+    }
+
+    .shoppingIcon {
+        margin-left: 80px;
+        padding: 10px 20px;
+
+        @include pad {
+            margin-left: 0px;
+        }
+
+        @include link-hover($color-secondary);
+        border-radius: 5px;
+    }
+}
+
+
+

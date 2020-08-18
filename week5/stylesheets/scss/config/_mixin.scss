@@ -1,0 +1,24 @@
+@mixin responsive-991 {
+    @media (max-width: 991px) {
+        @content
+    }
+};
+
+@mixin pad {
+    @media (max-width: 767px) {
+        @content
+    }
+};
+
+@mixin hide-text {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin link-hover ($bgc){
+    &:hover{
+        background-color: $bgc;
+        transition: 0.5s;
+    }
+}

@@ -1,0 +1,177 @@
+.banner {
+	margin-top: 30px;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 60px;
+	@include responsive-991 {
+		margin-top: 0px;
+	}
+}
+
+.category {
+	&List {
+		width: 33%;
+		text-align: center;
+		font-size: 24px;
+		color: $color-primary;
+		font-weight: bold;
+		@include responsive-991 {
+			width: 100%;
+		}
+	}
+
+	&Header {
+		border: solid 1px $color-secondary;
+		padding: 16px 0px;
+		color: $color-secondary;
+		background-color: $color-primary;
+	}
+
+	&Item {
+		a {
+			border: solid 1px $color-secondary;
+			display: block;
+			color: $color-primary;
+			padding: 16px 0px;
+		}
+
+		@include link-hover($color-secondary);
+	}
+
+	&Item.active {
+		background-color: $color-secondary;
+	}
+}
+
+.products {
+	width: 66%;
+	overflow-x: hidden;
+
+	@include responsive-991 {
+		width: 100%;
+		margin-top: 30px;
+	}
+}
+
+.product {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.card {
+		margin-bottom: 20px;
+		width: 49%;
+
+		@include pad {
+			width: 100%;
+			padding: 0px 20px;
+		}
+	}
+
+	.dessertImg {
+		width: 100%;
+	}
+
+	&Img {
+		position: relative;
+	}
+
+	.tag {
+		position: absolute;
+		left: 20px;
+		writing-mode: vertical-lr;
+		padding: 15px 10px;
+		background-color: $color-primary;
+		font-size: 16px;
+		font-weight: bold;
+		color: $color-secondary;
+	}
+
+	.heartIcon {
+		position: absolute;
+		top: 19px;
+		right: 22px;
+		cursor: pointer;
+	}
+
+	&Info {
+		display: flex;
+		color: $color-primary;
+		text-align: center;
+	}
+
+	&Title {
+		width: 50%;
+		border: solid 1px $color-secondary;
+		padding: 14px 0px;
+		font-size: 20px;
+	}
+
+	&Price {
+		width: 50%;
+		border: solid 1px $color-secondary;
+		padding: 14px 0px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	&Buy {
+		font-size: 24px;
+		font-weight: bold;
+		text-align: center;
+		background-color: $color-secondary;
+		border: solid 1px $color-secondary;
+
+		a {
+			display: block;
+			color: $color-primary;
+			padding: 16px 0px;
+			@include link-hover($color-primary);
+
+			&:hover {
+				color: $color-secondary;
+			}
+		}
+	}
+}
+
+.pagination {
+	&List {
+		margin-top: 30px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		@include responsive-991 {
+			justify-content: center;
+		}
+
+		li {
+			border: 1px solid $color-secondary;
+		}
+	}
+
+	&Arrow a {
+		display: block;
+		padding: 18px;
+		@include link-hover($color-secondary);
+	}
+
+	&Item a {
+		display: block;
+		font-size: 20px;
+		padding: 16px 24px;
+		color: $color-primary;
+		@include link-hover($color-secondary);
+	}
+
+	&Item.active a {
+		color: $color-secondary;
+		background-color: $color-primary;
+		border: solid 1px $color-primary;
+	}
+}
