@@ -2,6 +2,7 @@
 //
 // Used in conjunction with global variables to enable certain theme features.
 
+
 // Vendor
 @import "vendor/rfs";
 
@@ -45,3 +46,10 @@
 @import "mixins/grid-framework";
 @import "mixins/grid";
 @import "mixins/float";
+
+// 自訂mixins
+@mixin hide-text {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}

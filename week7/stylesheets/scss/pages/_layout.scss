@@ -1,0 +1,35 @@
+.logo{
+    background-size: auto;
+    display: block;
+    width: 128px;
+    height: 38px;
+    @include hide-text;
+    &Header{
+        background: url("../../img/index/d’Perfume.png") no-repeat;
+    }
+    &Footer{
+        background: url("../../img/index/d’Perfumew.png") no-repeat;
+    }
+}
+.footerbanner {
+    background-image: url(../../img/index/footerbanner.png);
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.mobileCart {
+    cursor: pointer;
+    a img {
+        height: 18px;
+    }
+    p{
+        position: absolute;
+        font-size: 12px;
+        border-radius: 100%;
+        width: 16px;
+        height: 16px;
+        top: -2px;
+        left: 25px;
+    }
+}

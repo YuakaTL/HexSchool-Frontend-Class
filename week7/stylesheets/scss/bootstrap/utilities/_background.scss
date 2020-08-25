@@ -1,8 +1,20 @@
 // stylelint-disable declaration-no-important
 
-@each $color, $value in $theme-colors {
-  @include bg-variant(".bg-#{$color}", $value, true);
+// 自定義bgc
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $color,
+    $value in $theme-colors {
+      @include bg-variant(".bg#{$infix}-#{$color}", $value, true);
+    }
+  }
 }
+
+// @each $color, $value in $theme-colors {
+//   @include bg-variant(".bg-#{$color}", $value, true);
+// }
 
 @if $enable-gradients {
   @each $color, $value in $theme-colors {

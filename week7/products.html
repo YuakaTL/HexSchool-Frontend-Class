@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d’Perfume</title>
+    <meta name='description' content='perfume web' />
+    <link rel="stylesheet" href="./stylesheets/css/all.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light p-0">
+                <h1 class="navbar-brand">
+                    <a href="index.html" class="logo logoHeader">d’Perfume</a>
+                </h1>
+                <div class="d-flex align-items-center justify-content-around">
+                    <div class="mobileCart d-md-none position-relative mr-3">
+                        <a href="#" class="btn border-none"><img src="./img/index/shopping-cart.svg" alt="Cart"
+                                class="d-block"></a>
+                        <p class="text-white text-center bg-primaryDark">3</p>
+                    </div>
+                    <button class="navbar-toggler collapsed btn" type="button" data-toggle="collapse" data-target="#navMenu"
+                        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse justify-content-end">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link d-flex" href="products.html"><img src="./img/index/tshirt.svg" alt="Product"
+                                    class="mr-1 d-block">Product</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link d-flex" href="login.html"><img src="./img/index/user-alt.svg" alt="Login"
+                                    class="mr-1 d-block">log in</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link d-flex" href="#"><img src="./img/index/heart.svg" alt="Wishlist"
+                                    class="mr-1 d-block">Wishlist</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link d-flex" href="#"><img src="./img/index/shopping-cart.svg" alt="Cart"
+                                    class="mr-1 d-block">Cart(3)</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="navbar-collapse collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item py-4 d-md-none bg-navDark border-bottom border-white">
+                    <a class="nav-link text-white" href="products.html">Product</a>
+                </li>
+                <li class="nav-item py-4 d-md-none bg-navDark border-bottom border-white">
+                    <a class="nav-link text-white" href="#">Wishlist</a>
+                </li>
+                <li class="nav-item py-4 d-md-none bg-navDark border-bottom border-white">
+                    <a class="nav-link text-white" href="#">Blog</a>
+                </li>
+                <li class="nav-item py-4 d-md-none bg-navDark border-bottom border-white">
+                    <a class="nav-link text-white" href="#">Contact</a>
+                </li>
+                <li class="nav-item py-4 d-md-none bg-navDark">
+                    <a class="nav-link text-white" href="login.html">Log in</a>
+                </li>
+            </ul>
+        </div>
+        <div class="bg-primaryDark d-none d-md-block">
+            <div class="container">
+                <ul class="nav list-unstyled">
+                    <li class="nav-item"><a href="#" class="nav-link text-white py-3 pl-0">CHANEL</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white py-3">Jo Malone</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white py-3">Curology</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white py-3">Dior</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white py-3">Chloe</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-white py-3">ZARA</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 客製化區塊 Start -->
+    <div class="modal fade" id="addCart" tabindex="-1" role="dialog" aria-labelledby=addCart" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <span class="text-primary font-weight-bold">已加入購物車</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="addWish" tabindex="-1" role="dialog" aria-labelledby=addWish" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <span class="text-primary font-weight-bold">已加入我的收藏</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-2 mt-md-5">
+        <ul class="row list-unstyled">
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product1.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380 <del class="text-muted">NT$1,580</del></h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product2.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380 <del class="text-muted">NT$1,580</del></h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product3.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380</h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product4.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380</h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product5.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380 <del class="text-muted">NT$1,580</del></h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="productInfo.html"><img src="./img/products/product6.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380 <del class="text-muted">NT$1,580</del></h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product7.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380</h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product8.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380</h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product9.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380 <del class="text-muted">NT$1,580</del></h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product10.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380 <del class="text-muted">NT$1,580</del></h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product11.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380</h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+            <li class="card col-6 col-md-4 col-lg-3 mt-7 mt-md-60">
+                <a href="#"><img src="./img/products/product12.png" class="card-img-top img-fluid"></a>
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Poppy & Barley</h4>
+                    <h6 class="card-text font-weight-normal">Jo Malone</h6>
+                    <h6 class="card-text font-weight-normal mt-4">NT$1,380</h6>
+                </div>
+                <div class="d-flex mt-1">
+                    <a href="#addWish" data-toggle="modal" class="mr-2"><img src="./img/products/heart.svg" alt="heart"></a>
+                    <a href="#addCart" data-toggle="modal"><img src="./img/products/shopping-cart.svg" alt="cart"></a>
+                </div>
+            </li>
+        </ul>
+        <nav aria-label="Page navigation" class="mt-8 mt-md-80">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 客製化區塊 End -->
+    
+    <div class="footerbanner d-flex mt-40 mt-md-60">
+        <div class="container d-flex">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h2 class="font-weight-bold text-dark">記得<br>訂閱以獲取更多資訊！</h2>
+                    <div class="input-group input-group-lg mt-5">
+                        <input type="text" class="form-control" placeholder="Your email address" aria-label="emailAddress"
+                            aria-describedby="button-addon">
+                        <div class="input-group-append">
+                            <button class="btn btn-primaryDark" type="button" id="button-addon">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer bg-primaryDark">
+        <div class="container py-3 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center justify-content-between">
+                <h1>
+                    <a href="index.html" class="logo logoFooter">d’Perfume</a>
+                </h1>
+                <small class="text-white ml-5 d-none d-md-block">© 2020. All Rights Reserved.</small>
+            </div>
+            <small class="text-white ml-5 d-block d-md-none">© 2020. All Rights Reserved.</small>
+            <ul class="list-unstyled d-none d-md-flex mb-0">
+                <li><a href="products.html" class="text-white p-5">Product</a></li>
+                <li><a href="#" class="text-white p-5">Blog</a></li>
+                <li><a href="#" class="text-white p-5">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/popper-1.16.1.min.js"></script>
+    <script src="./js/bootstrap-4.5.2.js"></script>
+</body>
+
+</html>

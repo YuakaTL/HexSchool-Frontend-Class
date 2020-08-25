@@ -1,0 +1,22 @@
+.banner{
+    background-image: url(../../img/index/banner.png);
+    background-repeat: no-repeat;
+    height: 870px;
+    background-size: cover;
+    background-position:center;
+    @include media-breakpoint-down(sm) {
+        height: 480px
+    }
+}
+.soldOut{
+    img{
+        position: relative;
+        filter: brightness(70%);
+    }
+    p{
+        position: absolute;
+        top:40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

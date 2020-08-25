@@ -120,10 +120,17 @@
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
-  border: $border-width solid transparent; // remove default button style
+  // border: $border-width solid transparent; // remove default button style
   @include border-radius($navbar-toggler-border-radius);
+  border:none;
 
+  // @include hover-focus() {
+  //   outline: 5px auto $primary;
+  //   text-decoration: none;
+  // }
   @include hover-focus() {
+    box-shadow:none;
+    border:none;
     text-decoration: none;
   }
 }
@@ -132,8 +139,10 @@
 // or image file as needed.
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  // width: 1.5em;
+  // height: 1.5em;
+  width: 2em;
+  height: 2rem;
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
