@@ -1,0 +1,219 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// START
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI","Microft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+
+.title{
+    font-size: 75px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 64px;
+}
+.subTitle{
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 16px;
+}
+
+.header{
+    position: relative;
+    .info{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        h1,p{
+            font-style: italic;
+            color: white;
+            font-weight: bold;
+        }
+        h1{
+            font-size: 80px;
+        }
+        p{
+            font-size: 24px;
+        }
+        .subTitle{
+            margin-top: 32px;
+        }
+        ul{
+            margin-top: 48px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.about{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    img{
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    ul{
+        margin-top: 24px;
+        li{
+            margin-top: 8px;
+            font-size: 24px;
+        }
+    }
+    hr{
+        width: 385px;
+        margin-top: 24px;
+    }
+    .experience{
+        margin-top: 32px;
+        li::before {
+            content: "";
+            width: 22px;
+            height: 22px;
+            background-color: #891818;
+            border-radius: 100%;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            transform: translate(-150%,-50%);
+        }
+        li{
+            margin-top: 32px;
+            position: relative;
+        }
+    }
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.brand{
+    background-color: black;
+    color:white;
+    text-align: center;
+    .title{
+        padding-top: 64px;
+    }
+    .content{
+        margin-top: 32px; 
+        font-size: 20px;
+    }
+    ul{
+        margin-top: 68px;
+        padding-bottom: 160px;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+        }
+        li:nth-child(1) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.otherWork{
+    text-align: center;
+    .content {
+        margin-top: 24px;
+        font-size: 20px;
+    }
+    ul{
+        margin-top: 56px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li{
+            width: 33%;
+            margin-bottom: 56px;
+            p{
+                font-size: 20px;
+                margin-top: 16px;
+            }
+        }
+        li:nth-child(4),
+        li:nth-child(5) {
+            width: 50%;
+        }
+    }
+}
+
+.contact{
+    background-color: black;
+    color:white;
+    text-align: center;
+    .title {
+        padding-top: 64px;
+    }
+    .subTitle {
+        padding-bottom: 80px;
+        a{
+            color: white;
+        }
+    }
+}
