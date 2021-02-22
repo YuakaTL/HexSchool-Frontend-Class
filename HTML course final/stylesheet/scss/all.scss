@@ -1,0 +1,12 @@
+// config
+@import "config/variable"; 
+@import "config/reset"; 
+@import "config/mixin";
+@import "config/init";
+
+// layout
+@import "layout/header";
+@import "layout/footer";
+
+// page
+@import "pages/index";
