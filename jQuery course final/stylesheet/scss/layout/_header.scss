@@ -1,0 +1,90 @@
+.goTop {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    color: rgba(0, 204, 153, 0.5);
+}
+
+.socialMedia {
+    background-color: #eee;
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            display: flex;
+
+            &:first-child:after {
+                content: "|";
+                color: gray;
+                padding: 5px 0px;
+                margin: 3px;
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        margin: 5px 0px;
+
+        img {
+            margin-right: 5px;
+        }
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+    .fb {
+        color: $color-fb;
+    }
+
+    .twitter {
+        color: $color-twitter;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &Logo {
+        background-image: url(../img/logo.png);
+        display: block;
+        width: 224px;
+        height: 50px;
+        @include hide-text;
+    }
+
+    .menu {
+        display: flex;
+
+        li {
+            position: relative;
+        }
+
+        .dropdownList {
+            position: absolute;
+            display: none;
+            width: 100%;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, .9);
+        }
+
+        a {
+            display: block;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: $color-primary;
+
+            position: relative;
+            @include link-hover ($color-primary, 5px);
+        }
+    }
+}

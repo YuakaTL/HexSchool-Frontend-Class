@@ -1,0 +1,11 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+
+    li a {
+        color: $color-secondary;
+        position: relative;
+        @include link-hover ($color-secondary, 3px);
+    }
+}

@@ -1,0 +1,22 @@
+@mixin hide-text {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin link-hover ($color, $size) {
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 0%;
+        border-bottom: $size solid transparent;
+        transition: 0.5s;
+    }
+
+    &:hover:after {
+        width: 100%;
+        border-bottom: solid $size $color;
+    }
+}
