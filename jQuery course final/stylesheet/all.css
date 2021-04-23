@@ -81,6 +81,10 @@ a {
   margin: 0 auto;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .goTop {
   position: fixed;
   bottom: 2%;
@@ -92,7 +96,6 @@ a {
   background-color: #eee;
 }
 .socialMedia ul {
-  display: flex;
   justify-content: flex-end;
 }
 .socialMedia ul li {
@@ -124,7 +127,6 @@ a {
 }
 
 .header {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -136,9 +138,6 @@ a {
   text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
-}
-.header .menu {
-  display: flex;
 }
 .header .menu li {
   position: relative;
@@ -173,7 +172,6 @@ a {
 }
 
 .footer {
-  display: flex;
   justify-content: space-between;
   padding: 15px 10px;
 }
@@ -223,7 +221,6 @@ a {
 }
 
 .course {
-  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -260,7 +257,6 @@ a {
 }
 
 .compare {
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
@@ -308,7 +304,6 @@ a {
 }
 .bgGreen .contact {
   margin-top: 20px;
-  display: flex;
   justify-content: space-around;
 }
 .bgGreen .contactMessage {
@@ -319,7 +314,6 @@ a {
 }
 .bgGreen .contactInfo {
   width: 45%;
-  display: flex;
   flex-direction: column;
 }
 .bgGreen .contactInfo label {
