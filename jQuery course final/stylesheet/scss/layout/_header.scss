@@ -9,7 +9,6 @@
     background-color: #eee;
 
     ul {
-        display: flex;
         justify-content: flex-end;
 
         li {
@@ -49,7 +48,6 @@
 }
 
 .header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 
@@ -62,7 +60,6 @@
     }
 
     .menu {
-        display: flex;
 
         li {
             position: relative;
